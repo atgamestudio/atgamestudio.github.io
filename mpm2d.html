@@ -1,530 +1,999 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
     <title>Moving Platform Maker 2D | AT Game Studio</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/lightbox.css" rel="stylesheet"> 
-    <link href="css/animate.min.css" rel="stylesheet"> 
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/lightbox.css" rel="stylesheet" />
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
 
     <!--[if lt IE 9]>
-	    <script src="js/html5shiv.js"></script>
-	    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-    
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="images/ico/apple-touch-icon-144-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="images/ico/apple-touch-icon-114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="images/ico/apple-touch-icon-72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="images/ico/apple-touch-icon-57-precomposed.png"
+    />
+
     <style>
-        ul {
-            list-style: inherit;
-        }
-    </style>
-</head><!--/head-->
+      ul {
+        list-style: inherit;
+      }
+    </style></head
+  >
 
-<body>
-	<header id="header">      
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 overflow">
-                   <div class="social-icons pull-right">
-                        <ul class="nav nav-pills">
-                            <!--<li><a href=""><i class="fa fa-facebook"></i></a></li>-->
-                            <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>-->
-                            <!--<li><a href=""><i class="fa fa-google-plus"></i></a></li>-->
-                            <!--<li><a href=""><i class="fa fa-dribbble"></i></a></li>-->
-                            <!--<li><a href=""><i class="fa fa-linkedin"></i></a></li>-->
-                        </ul>
-                    </div> 
-                </div>
-             </div>
-        </div>
-        <div class="navbar navbar-inverse" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <a class="navbar-brand" href="index.html">
-                    	<h1><img class="img-responsive center-block" src="images/logo.png" alt="logo"></h1>
-                    </a>
-                    
-                </div>
-                
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="index.html">Home</a></li>
-                    </ul>
-                </div>
-                        
+  <body>
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 overflow">
+            <div class="social-icons pull-right">
+              <ul class="nav nav-pills">
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="navbar navbar-inverse" role="banner">
+        <div class="container">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target=".navbar-collapse"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="index.html">
+              <h1>
+                <img
+                  class="img-responsive center-block"
+                  src="images/logo.png"
+                  alt="logo"
+                  style="width: 100px;"
+                />
+              </h1>
+              <p>Level 9 Games</p>
+            </a>
+          </div>
+
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="index.html">Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
-    <!--/#header-->
 
     <section id="page-breadcrumb">
-        <div class="vertical-center sun">
-             <div class="container">
-                <div class="row">
-                    <div class="action">
-                        <div class="col-sm-12">
-                            <h1 class="title">Moving Platform Maker 2D</h1>
-                        </div>
-                     </div>
-                </div>
-            </div>
-        </div>
-   </section>
-    <!--/#page-breadcrumb-->
-
-    <section id="content" class="padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+      <div class="vertical-center sun">
         <div class="container">
-           
-
-<h2 id="introduction">Introduction</h2>
-
-<p>The Moving Platform Maker 2D Asset is the solution to easily create 2D moving platforms. </p>
-
-<p>Here is what you can do:</p>
-
-<ul>
-<li>Ping Pong</li>
-</ul>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/1---Simples--vai-e-volta.gif" alt=""></p>
-
-<ul>
-<li>Loop</li>
-</ul>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/2--C-clica--3-ou-mais-pontos-.gif" alt=""></p>
-
-<ul>
-<li>Go from a path onto another</li>
-</ul>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/3--Plataforma-que-cai-de-uma-linha-para-outra-.gif" alt=""></p>
-
-<ul>
-<li>Multiple path followers on a path</li>
-</ul>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/4--Multiplas-plataformas-por-trilho--rail-.gif" alt=""></p>
-
-<ul>
-<li>Connected paths</li>
-</ul>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/13--Plataforma-com-multiplos-caminhos---2.gif" alt=""></p>
-
-<ul>
-<li>Falling Platforms</li>
-</ul>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/7--Est-tica--caindo-depois-de-um-delay.gif" alt=""></p>
-
-<ul>
-<li>Enemies</li>
-</ul>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/enemy-3.gif" alt=""></p>
-
-<ul>
-<li>Blades</li>
-</ul>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/8--Armadilhas-m-veis--Serrote-que-anda----3.gif" alt=""></p>
-
-<ul>
-<li>Circular platforms</li>
-</ul>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/14--Plataforma-circular.gif" alt=""></p>
-
-<ul>
-<li>Trigger activated on the first touch</li>
-</ul>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/9--Ativada-pelo-jogador-no-primeiro-toque---2.gif" alt=""></p>
-
-<ul>
-<li>Trigger activated from a distance</li>
-</ul>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/12--Ativada-por-proximidade--ou-quando-vis-vel-pela-c-mera-1.gif" alt=""></p>
-
-<ul>
-<li>Trigger activated only when the player is inside the trigger area</li>
-</ul>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/10--Ativada-somente-quando-jogador-permanece-em-cima.gif" alt=""></p>
-
-<ul>
-<li>Trigger activated only when the player is inside the trigger area, and changes direction each time</li>
-</ul>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/11--Ativada-somente-quando-jogador-permanece-em-cima--mas-cada-vez-inverte-o-sentido-1.gif" alt=""></p>
-
-<p>Convinced? </p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/Fry_Looking_Squint.jpg" alt=""></p>
-
-<p>Let's talk about how it works.</p>
-
-<hr>
-
-<h2 id="path">Path</h2>
-
-<p>Creating a path from the GameObject menu:</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/Menu-Creating-a-Path-2.gif" alt=""></p>
-
-<p>A path consists of:</p>
-
-<p><strong>a) Edit button</strong></p>
-
-<p>The edit button enables the path editor, where you can add, remove and move points of the path. </p>
-
-<p>- Editing and moving points:</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/Editing-a-Path-2.gif" alt=""></p>
-
-<p>- Adding new points at the end: <br>
-Hold Shift and click in the position that you want the new point.<br>
-(This option is not available when the path is Cyclic.) </p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/Edit-add-1-1.gif" alt=""></p>
-
-<p>- Adding new points in the middle:<br>
-Hold Shift and click in the circles that appear between the existent points.</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/Edit-add-2-1.gif" alt=""></p>
-
-<p>- Removing points:<br>
-Hold Ctrl and click on the points that you want to remove.</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/Edit-delete-1.gif" alt=""></p>
-
-<p><strong>b) Easing curve</strong></p>
-
-<p>The easing curve of the path can be adjusted for the movement of the path follower. The default curve is a straight line and it's the best option when using with an open path or connected:</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/Path-curve.png" alt=""></p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/1---Simples--vai-e-volta.gif" alt=""></p>
-
-<p>You can use a sigmoid curve to make the movement smoother:</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/Path-curve-2.png" alt=""></p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/15--ping-pong--com-uma-curva-easing-sigmoidal.gif" alt="">
-<br></p>
-
-<p><strong>c) Type</strong></p>
-
-<p>There are three types of Paths:</p>
-
-<p>1 - Cyclic:</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/Path-1.png" alt=""></p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/2--C-clica--3-ou-mais-pontos-.gif" alt=""></p>
-
-<p>2 - Ping Pong:</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/Path-2.png" alt=""></p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/1---Simples--vai-e-volta.gif" alt=""></p>
-
-<p>2.1 - Ping-Pong - Open start:</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/open-start.png" alt=""></p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/open-start-1.gif" alt=""></p>
-
-<p>2.2 - Ping-Pong - Open end:</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/open-end.png" alt=""></p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/open-end-1.gif" alt=""></p>
-
-<p>3 - Connected:</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/Path-3.png" alt=""></p>
-
-<div  class="text-center">
-<iframe width="854" height="480" src="https://www.youtube.com/embed/KatA-7SuL_I" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<hr>
-
-<h2 id="pathfollower">Path follower</h2>
-
-<p>The path follower is a game object that can follow a path. It can be a platform, an enemy, etc. <br>
-How to create a path follower?</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/ath-follower-create-2.gif" alt=""></p>
-
-<p>A path follower consists of:</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/Path-follower.png" alt=""></p>
-
-<p><strong>a) Active</strong></p>
-
-<p>It defines whether this object is active in following the path or not. If not it'll stand still.</p>
-
-<p><strong>b) Direction</strong></p>
-
-<p>It defines the direction that it'll follow the path. Forward: from start to end. Backward: from end to start. In a ping pong path the direction changes when the follower reaches the boundaries.</p>
-
-<p><strong>c) Speed</strong></p>
-
-<p>It defines the speed of the follower.</p>
-
-<p><strong>d) Gravity</strong></p>
-
-<p>The gravity acceleration of the follower when out of the path. It has it's own acceleration independent of the unity physics system.</p>
-
-<p><strong>e) Look At Next Waypoint</strong></p>
-
-<p>Useful for enemies, when following a path it turns it's front in the direction of the next waypoint of the path, relativelly to the X axis. Example:</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/enemy-3.gif" alt=""></p>
-
-<hr>
-
-<h2 id="pathfollowertrigger">PathFollowerTrigger</h2>
-
-<p>It is used to activate a path follower when the player or something enters in the trigger area. <br>
-How to create a trigger ? </p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/path-follower-trigger-create.gif" alt=""></p>
-
-<div  class="text-center">
-<iframe width="854" height="480" src="https://www.youtube.com/embed/jObUKdQncMc" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
-<p>A BoxCollider2D will be added to the game object. You can change to any other collider 2D you want, it just need to be a trigger.</p>
-
-<p>A path follower trigger consists of:</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/Path-follower-trigger.png" alt=""></p>
-
-<p><strong>a) Layer Mask</strong></p>
-
-<p>The layer mask defines which layers can interact with the trigger.</p>
-
-<p><strong>b) Followers</strong></p>
-
-<p>A list of path followers that will activate when the trigger is fired.</p>
-
-<p><strong>c) Active Only When Inside</strong></p>
-
-<p>If checked, the followers will only be active when the player is inside the trigger area. If unchecked, the followers will be activated when the player enters the first time into the trigger area.</p>
-
-<p><strong>d) Change Direction On Activate</strong></p>
-
-<p>Each time the trigger is activated it will change the follower's direction.</p>
-
-<hr>
-
-<h2 id="circularplatformcontroller">CircularPlatformController</h2>
-
-<p>How to create a circular platform controller?</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/circular-platform.gif" alt=""></p>
-
-<p>A circular platform controller consists of:</p>
-
-<p><strong>a) Gizmo Color</strong></p>
-
-<p>The color of the circle gizmo.</p>
-
-<p><strong>b) Degrees per second</strong></p>
-
-<p>The angular velocity of the platforms in degrees per second.</p>
-
-<p><strong>c) Radius</strong></p>
-
-<p>The radius of the circle.</p>
-
-<p><strong>d) Number Of Platforms</strong></p>
-
-<p>The number of platforms that will be instantiated.</p>
-
-<p><strong>e) Platform Prefab</strong></p>
-
-<p>The platform prefab that will be instantiated.</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/14--Plataforma-circular.gif" alt=""></p>
-
-<p>You can use it for enemies also.</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/circular-enemies.gif" alt=""></p>
-
-<hr>
-
-<h2 id="movingplatform">Moving platform</h2>
-
-<p>This script is used in the platform prefab and is responsible for carrying the player.</p>
-
-<hr>
-
-<h2 id="fallingplatform">Falling platform</h2>
-
-<p>This script is used in the platform to set a delay to fall after being touched by the player.</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/falling-platform.png" alt=""></p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/7--Est-tica--caindo-depois-de-um-delay.gif" alt=""></p>
-
-<hr>
-
-<h2 id="decorators">Decorators</h2>
-
-<p>There are 2 decorators that can help to better visualize the paths. Just add the script to the path game object.</p>
-
-<ul>
-<li>PathGizmosDecorator</li>
-</ul>
-
-<p>It shows the path in the scene view in the editor.</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/PathGizmosDecorator.png" alt=""></p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/PathGizmosDecoratorExample.png" alt=""></p>
-
-<ul>
-<li>PathLineDecorator</li>
-</ul>
-
-<p>It creates line renderers to show the path in the scene view and also in the game view.</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/PathLineDecorator.png" alt=""></p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/2--C-clica--3-ou-mais-pontos-.gif" alt=""></p>
-
-<hr>
-
-<h2 id="credits">Credits</h2>
-
-<h3 id="demoscenes">Demo Scenes</h3>
-
-<p>The demo scenes were inspired by Super Mario World's levels. All the images and music are open sourced.</p>
-
-<blockquote>
-  <p>Donut plains 3</p>
-</blockquote>
-
-<p>Music: <br>
-<a href="http://opengameart.org/content/jump-and-run-8-bit">http://opengameart.org/content/jump-and-run-8-bit</a></p>
-
-<p>Sprites: <br>
-<a href="http://opengameart.org/content/platformer-art-mushroom-land">http://opengameart.org/content/platformer-art-mushroom-land</a><br>
-<a href="http://opengameart.org/content/platformer-art-deluxe">http://opengameart.org/content/platformer-art-deluxe</a><br>
-<a href="http://opengameart.org/content/2d-backgrounds-set">http://opengameart.org/content/2d-backgrounds-set</a></p>
-
-<blockquote>
-  <p>Forest Fortress</p>
-</blockquote>
-
-<p>Music: <br>
-<a href="http://opengameart.org/content/the-forgotten-forest">http://opengameart.org/content/the-forgotten-forest</a></p>
-
-<p>Sprites: <br>
-<a href="http://opengameart.org/content/pixel-art-castle-tileset">http://opengameart.org/content/pixel-art-castle-tileset</a><br>
-<a href="https://commons.wikimedia.org/wiki/File:Circular_saw_blade.png">https://commons.wikimedia.org/wiki/File:Circular<em>saw</em>blade.png</a><br>
-<a href="http://opengameart.org/content/16x16-and-animated-lava-tile-45-frames">http://opengameart.org/content/16x16-and-animated-lava-tile-45-frames</a><br>
-<a href="https://openclipart.org/detail/22293/cartoon-rhino">https://openclipart.org/detail/22293/cartoon-rhino</a></p>
-
-<p>Tiles:<br>
-<a href="https://www.assetstore.unity3d.com/en/#!/content/20203">https://www.assetstore.unity3d.com/en/#!/content/20203</a></p>
-    
-<h3 id="unitychan2d">Unity Chan 2D</h3>
-
-<p>The demo scenes were created using the Unity-Chan 2D which is not included in the asset. Unity-Chan is a copyright © Unity Technologies Japan/UCL. The Unity-Chan package can be downloaded <a href="http://unity-chan.com/download/releaseNote.php?id=UnityChan2D&amp;lang=en">here</a>. Please read the <a href="http://unity-chan.com/contents/license_en/">licence terms</a> before using it for any purpose. <br>
-In order to make it easier to achieve the same results, here are the configurations for each scene. Just add Unity-Chan 2D prefab to the scene and configure as follows:</p>
-
-<p>Donut Plains 3</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/UChan---DP.png" alt="Donut Plains 3"></p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/UChan---DP2.png" alt="Donut Plains 3"></p>
-
-<p>Forest Fortress</p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/UChan---FF.png" alt="Forest Fortress"></p>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/UChan---FF2.png" alt="Forest Fortress"></p>
-
-<hr>
-
-<h2 id="thatsitwhatdoyouthink">That's it. What do you think?</h2>
-
-<p><img class="img-responsive center-block" src="./mpm2d_files/Shut-up-and-take-my-money.jpg" alt=""></p>
-
+          <div class="row">
+            <div class="action">
+              <div class="col-sm-12">
+                <h1 class="title">Moving Platform Maker 2D</h1>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-<footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 text-center bottom-separator">
-                    <img class="img-responsive center-block" src="images/home/under.png" class="img-responsive inline" alt="">
-                </div>
+    <section
+      id="content"
+      class="padding wow fadeIn"
+      data-wow-duration="1000ms"
+      data-wow-delay="300ms"
+    >
+      <div class="container">
+        <h2 id="introduction">Introduction</h2>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="testimonial bottom">
-                    </div> 
-                </div>
+        <p>
+          The Moving Platform Maker 2D Asset is the solution to easily create 2D
+          moving platforms.
+        </p>
 
-                <div class="col-md-4 col-sm-6 pull-right">
-                    <div class="contact-info bottom">
-                        <h2>Contacts</h2>
-                        <address>
-                        E-mail: <a href="mailto:atgamestudio@gmail.com">atgamestudio@gmail.com</a> <br> 
-                        </address>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="copyright-text text-center">
-                        <p>&copy; AT Game Studio 2016. All Rights Reserved.</p>
-                        <p>Crafted by <a target="_blank" href="http://designscrazed.org/">Allie</a></p>
-                    </div>
-                </div>
-            </div>
+        <p>Here is what you can do:</p>
+
+        <ul>
+          <li>Ping Pong</li>
+        </ul>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/1---Simples--vai-e-volta.gif"
+            alt=""
+          />
+        </p>
+
+        <ul>
+          <li>Loop</li>
+        </ul>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/2--C-clica--3-ou-mais-pontos-.gif"
+            alt=""
+          />
+        </p>
+
+        <ul>
+          <li>Go from a path onto another</li>
+        </ul>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/3--Plataforma-que-cai-de-uma-linha-para-outra-.gif"
+            alt=""
+          />
+        </p>
+
+        <ul>
+          <li>Multiple path followers on a path</li>
+        </ul>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/4--Multiplas-plataformas-por-trilho--rail-.gif"
+            alt=""
+          />
+        </p>
+
+        <ul>
+          <li>Connected paths</li>
+        </ul>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/13--Plataforma-com-multiplos-caminhos---2.gif"
+            alt=""
+          />
+        </p>
+
+        <ul>
+          <li>Falling Platforms</li>
+        </ul>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/7--Est-tica--caindo-depois-de-um-delay.gif"
+            alt=""
+          />
+        </p>
+
+        <ul>
+          <li>Enemies</li>
+        </ul>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/enemy-3.gif"
+            alt=""
+          />
+        </p>
+
+        <ul>
+          <li>Blades</li>
+        </ul>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/8--Armadilhas-m-veis--Serrote-que-anda----3.gif"
+            alt=""
+          />
+        </p>
+
+        <ul>
+          <li>Circular platforms</li>
+        </ul>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/14--Plataforma-circular.gif"
+            alt=""
+          />
+        </p>
+
+        <ul>
+          <li>Trigger activated on the first touch</li>
+        </ul>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/9--Ativada-pelo-jogador-no-primeiro-toque---2.gif"
+            alt=""
+          />
+        </p>
+
+        <ul>
+          <li>Trigger activated from a distance</li>
+        </ul>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/12--Ativada-por-proximidade--ou-quando-vis-vel-pela-c-mera-1.gif"
+            alt=""
+          />
+        </p>
+
+        <ul>
+          <li>
+            Trigger activated only when the player is inside the trigger area
+          </li>
+        </ul>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/10--Ativada-somente-quando-jogador-permanece-em-cima.gif"
+            alt=""
+          />
+        </p>
+
+        <ul>
+          <li>
+            Trigger activated only when the player is inside the trigger area,
+            and changes direction each time
+          </li>
+        </ul>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/11--Ativada-somente-quando-jogador-permanece-em-cima--mas-cada-vez-inverte-o-sentido-1.gif"
+            alt=""
+          />
+        </p>
+
+        <p>Convinced?</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/Fry_Looking_Squint.jpg"
+            alt=""
+          />
+        </p>
+
+        <p>Let's talk about how it works.</p>
+
+        <hr />
+
+        <h2 id="path">Path</h2>
+
+        <p>Creating a path from the GameObject menu:</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/Menu-Creating-a-Path-2.gif"
+            alt=""
+          />
+        </p>
+
+        <p>A path consists of:</p>
+
+        <p><strong>a) Edit button</strong></p>
+
+        <p>
+          The edit button enables the path editor, where you can add, remove and
+          move points of the path.
+        </p>
+
+        <p>- Editing and moving points:</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/Editing-a-Path-2.gif"
+            alt=""
+          />
+        </p>
+
+        <p>
+          - Adding new points at the end: <br />
+          Hold Shift and click in the position that you want the new point.<br />
+          (This option is not available when the path is Cyclic.)
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/Edit-add-1-1.gif"
+            alt=""
+          />
+        </p>
+
+        <p>
+          - Adding new points in the middle:<br />
+          Hold Shift and click in the circles that appear between the existent
+          points.
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/Edit-add-2-1.gif"
+            alt=""
+          />
+        </p>
+
+        <p>
+          - Removing points:<br />
+          Hold Ctrl and click on the points that you want to remove.
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/Edit-delete-1.gif"
+            alt=""
+          />
+        </p>
+
+        <p><strong>b) Easing curve</strong></p>
+
+        <p>
+          The easing curve of the path can be adjusted for the movement of the
+          path follower. The default curve is a straight line and it's the best
+          option when using with an open path or connected:
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/Path-curve.png"
+            alt=""
+          />
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/1---Simples--vai-e-volta.gif"
+            alt=""
+          />
+        </p>
+
+        <p>You can use a sigmoid curve to make the movement smoother:</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/Path-curve-2.png"
+            alt=""
+          />
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/15--ping-pong--com-uma-curva-easing-sigmoidal.gif"
+            alt=""
+          />
+          <br />
+        </p>
+
+        <p><strong>c) Type</strong></p>
+
+        <p>There are three types of Paths:</p>
+
+        <p>1 - Cyclic:</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/Path-1.png"
+            alt=""
+          />
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/2--C-clica--3-ou-mais-pontos-.gif"
+            alt=""
+          />
+        </p>
+
+        <p>2 - Ping Pong:</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/Path-2.png"
+            alt=""
+          />
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/1---Simples--vai-e-volta.gif"
+            alt=""
+          />
+        </p>
+
+        <p>2.1 - Ping-Pong - Open start:</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/open-start.png"
+            alt=""
+          />
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/open-start-1.gif"
+            alt=""
+          />
+        </p>
+
+        <p>2.2 - Ping-Pong - Open end:</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/open-end.png"
+            alt=""
+          />
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/open-end-1.gif"
+            alt=""
+          />
+        </p>
+
+        <p>3 - Connected:</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/Path-3.png"
+            alt=""
+          />
+        </p>
+
+        <div class="text-center">
+          <iframe
+            width="854"
+            height="480"
+            src="https://www.youtube.com/embed/KatA-7SuL_I"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
+
+        <hr />
+
+        <h2 id="pathfollower">Path follower</h2>
+
+        <p>
+          The path follower is a game object that can follow a path. It can be a
+          platform, an enemy, etc. <br />
+          How to create a path follower?
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/ath-follower-create-2.gif"
+            alt=""
+          />
+        </p>
+
+        <p>A path follower consists of:</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/Path-follower.png"
+            alt=""
+          />
+        </p>
+
+        <p><strong>a) Active</strong></p>
+
+        <p>
+          It defines whether this object is active in following the path or not.
+          If not it'll stand still.
+        </p>
+
+        <p><strong>b) Direction</strong></p>
+
+        <p>
+          It defines the direction that it'll follow the path. Forward: from
+          start to end. Backward: from end to start. In a ping pong path the
+          direction changes when the follower reaches the boundaries.
+        </p>
+
+        <p><strong>c) Speed</strong></p>
+
+        <p>It defines the speed of the follower.</p>
+
+        <p><strong>d) Gravity</strong></p>
+
+        <p>
+          The gravity acceleration of the follower when out of the path. It has
+          it's own acceleration independent of the unity physics system.
+        </p>
+
+        <p><strong>e) Look At Next Waypoint</strong></p>
+
+        <p>
+          Useful for enemies, when following a path it turns it's front in the
+          direction of the next waypoint of the path, relativelly to the X axis.
+          Example:
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/enemy-3.gif"
+            alt=""
+          />
+        </p>
+
+        <hr />
+
+        <h2 id="pathfollowertrigger">PathFollowerTrigger</h2>
+
+        <p>
+          It is used to activate a path follower when the player or something
+          enters in the trigger area. <br />
+          How to create a trigger ?
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/path-follower-trigger-create.gif"
+            alt=""
+          />
+        </p>
+
+        <div class="text-center">
+          <iframe
+            width="854"
+            height="480"
+            src="https://www.youtube.com/embed/jObUKdQncMc"
+            frameborder="0"
+            allowfullscreen=""
+          ></iframe>
+        </div>
+
+        <p>
+          A BoxCollider2D will be added to the game object. You can change to
+          any other collider 2D you want, it just need to be a trigger.
+        </p>
+
+        <p>A path follower trigger consists of:</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/Path-follower-trigger.png"
+            alt=""
+          />
+        </p>
+
+        <p><strong>a) Layer Mask</strong></p>
+
+        <p>
+          The layer mask defines which layers can interact with the trigger.
+        </p>
+
+        <p><strong>b) Followers</strong></p>
+
+        <p>
+          A list of path followers that will activate when the trigger is fired.
+        </p>
+
+        <p><strong>c) Active Only When Inside</strong></p>
+
+        <p>
+          If checked, the followers will only be active when the player is
+          inside the trigger area. If unchecked, the followers will be activated
+          when the player enters the first time into the trigger area.
+        </p>
+
+        <p><strong>d) Change Direction On Activate</strong></p>
+
+        <p>
+          Each time the trigger is activated it will change the follower's
+          direction.
+        </p>
+
+        <hr />
+
+        <h2 id="circularplatformcontroller">CircularPlatformController</h2>
+
+        <p>How to create a circular platform controller?</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/circular-platform.gif"
+            alt=""
+          />
+        </p>
+
+        <p>A circular platform controller consists of:</p>
+
+        <p><strong>a) Gizmo Color</strong></p>
+
+        <p>The color of the circle gizmo.</p>
+
+        <p><strong>b) Degrees per second</strong></p>
+
+        <p>The angular velocity of the platforms in degrees per second.</p>
+
+        <p><strong>c) Radius</strong></p>
+
+        <p>The radius of the circle.</p>
+
+        <p><strong>d) Number Of Platforms</strong></p>
+
+        <p>The number of platforms that will be instantiated.</p>
+
+        <p><strong>e) Platform Prefab</strong></p>
+
+        <p>The platform prefab that will be instantiated.</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/14--Plataforma-circular.gif"
+            alt=""
+          />
+        </p>
+
+        <p>You can use it for enemies also.</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/circular-enemies.gif"
+            alt=""
+          />
+        </p>
+
+        <hr />
+
+        <h2 id="movingplatform">Moving platform</h2>
+
+        <p>
+          This script is used in the platform prefab and is responsible for
+          carrying the player.
+        </p>
+
+        <hr />
+
+        <h2 id="fallingplatform">Falling platform</h2>
+
+        <p>
+          This script is used in the platform to set a delay to fall after being
+          touched by the player.
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/falling-platform.png"
+            alt=""
+          />
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/7--Est-tica--caindo-depois-de-um-delay.gif"
+            alt=""
+          />
+        </p>
+
+        <hr />
+
+        <h2 id="decorators">Decorators</h2>
+
+        <p>
+          There are 2 decorators that can help to better visualize the paths.
+          Just add the script to the path game object.
+        </p>
+
+        <ul>
+          <li>PathGizmosDecorator</li>
+        </ul>
+
+        <p>It shows the path in the scene view in the editor.</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/PathGizmosDecorator.png"
+            alt=""
+          />
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/PathGizmosDecoratorExample.png"
+            alt=""
+          />
+        </p>
+
+        <ul>
+          <li>PathLineDecorator</li>
+        </ul>
+
+        <p>
+          It creates line renderers to show the path in the scene view and also
+          in the game view.
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/PathLineDecorator.png"
+            alt=""
+          />
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/2--C-clica--3-ou-mais-pontos-.gif"
+            alt=""
+          />
+        </p>
+
+        <hr />
+
+        <h2 id="credits">Credits</h2>
+
+        <h3 id="demoscenes">Demo Scenes</h3>
+
+        <p>
+          The demo scenes were inspired by Super Mario World's levels. All the
+          images and music are open sourced.
+        </p>
+
+        <blockquote>
+          <p>Donut plains 3</p>
+        </blockquote>
+
+        <p>
+          Music: <br />
+          <a href="http://opengameart.org/content/jump-and-run-8-bit"
+            >http://opengameart.org/content/jump-and-run-8-bit</a
+          >
+        </p>
+
+        <p>
+          Sprites: <br />
+          <a href="http://opengameart.org/content/platformer-art-mushroom-land"
+            >http://opengameart.org/content/platformer-art-mushroom-land</a
+          ><br />
+          <a href="http://opengameart.org/content/platformer-art-deluxe"
+            >http://opengameart.org/content/platformer-art-deluxe</a
+          ><br />
+          <a href="http://opengameart.org/content/2d-backgrounds-set"
+            >http://opengameart.org/content/2d-backgrounds-set</a
+          >
+        </p>
+
+        <blockquote>
+          <p>Forest Fortress</p>
+        </blockquote>
+
+        <p>
+          Music: <br />
+          <a href="http://opengameart.org/content/the-forgotten-forest"
+            >http://opengameart.org/content/the-forgotten-forest</a
+          >
+        </p>
+
+        <p>
+          Sprites: <br />
+          <a href="http://opengameart.org/content/pixel-art-castle-tileset"
+            >http://opengameart.org/content/pixel-art-castle-tileset</a
+          ><br />
+          <a
+            href="https://commons.wikimedia.org/wiki/File:Circular_saw_blade.png"
+            >https://commons.wikimedia.org/wiki/File:Circular<em>saw</em>blade.png</a
+          ><br />
+          <a
+            href="http://opengameart.org/content/16x16-and-animated-lava-tile-45-frames"
+            >http://opengameart.org/content/16x16-and-animated-lava-tile-45-frames</a
+          ><br />
+          <a href="https://openclipart.org/detail/22293/cartoon-rhino"
+            >https://openclipart.org/detail/22293/cartoon-rhino</a
+          >
+        </p>
+
+        <p>
+          Tiles:<br />
+          <a href="https://www.assetstore.unity3d.com/en/#!/content/20203"
+            >https://www.assetstore.unity3d.com/en/#!/content/20203</a
+          >
+        </p>
+
+        <h3 id="unitychan2d">Unity Chan 2D</h3>
+
+        <p>
+          The demo scenes were created using the Unity-Chan 2D which is not
+          included in the asset. Unity-Chan is a copyright © Unity Technologies
+          Japan/UCL. The Unity-Chan package can be downloaded
+          <a
+            href="http://unity-chan.com/download/releaseNote.php?id=UnityChan2D&amp;lang=en"
+            >here</a
+          >. Please read the
+          <a href="http://unity-chan.com/contents/license_en/">licence terms</a>
+          before using it for any purpose. <br />
+          In order to make it easier to achieve the same results, here are the
+          configurations for each scene. Just add Unity-Chan 2D prefab to the
+          scene and configure as follows:
+        </p>
+
+        <p>Donut Plains 3</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/UChan---DP.png"
+            alt="Donut Plains 3"
+          />
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/UChan---DP2.png"
+            alt="Donut Plains 3"
+          />
+        </p>
+
+        <p>Forest Fortress</p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/UChan---FF.png"
+            alt="Forest Fortress"
+          />
+        </p>
+
+        <p>
+          <img
+            class="img-responsive center-block"
+            src="./mpm2d_files/UChan---FF2.png"
+            alt="Forest Fortress"
+          />
+        </p>
+
+        <hr />
+
+        <h2 id="thatsitwhatdoyouthink">That's it. What do you think?</h2>
+
+        <div style="text-align: center;">
+          <a target="_blank" href="http://u3d.as/Ayo" class="btn btn-danger">GO TO ASSET STORE</a>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center bottom-separator">
+            <img
+              class="img-responsive center-block"
+              src="images/home/under.png"
+              class="img-responsive inline"
+              alt=""
+            />
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <div class="testimonial bottom"></div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 pull-right">
+            <div class="contact-info bottom">
+              <h2>Contact</h2>
+              <address>
+                E-mail:
+                <a href="mailto:atgamestudio@gmail.com"
+                  >atgamestudio@gmail.com</a
+                >
+                <br />
+              </address>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="copyright-text text-center">
+              <p>&copy; Level 9 Games 2016-2020. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-    <!--/#footer-->
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/lightbox.min.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>   
-	
-	<script>
-        
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <script type="text/javascript" src="js/main.js"></script>
 
-  ga('create', 'UA-76389680-1', 'auto');
-  ga('send', 'pageview', location.pathname);
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
 
-</script>
-</body>
+      ga("create", "UA-76389680-1", "auto");
+      ga("send", "pageview", location.pathname);
+    </script>
+  </body>
 </html>
